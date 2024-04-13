@@ -1,5 +1,6 @@
 <?php
-    include"header.php";
+    include "header.php";
+    include "connect.php";
     session_start();
 ?>
 <!DOCTYPE html>
@@ -17,26 +18,25 @@
     <main>
         <div class="container">
         <h2 class="text-personal-account">Личный кабинет</h2>
-
         <div class="blok-main"> 
     <div> 
-        <img src="images\user.png" class="img-user" alt=""> 
+        <img src="images\free-icon-boy-4537069.png" class="img-user" alt=""> 
     </div> 
     <form action="" method="post" class="form-user-info"> 
-        <input type="text" placeholder="имя" value="<?php echo isset($_SESSION['user_password']) ? $_SESSION['user_password'] : ''; ?>"> <!-- Изменено на вывод пароля -->
-        <input type="email" name="user_email" placeholder="email" value="<?php echo isset($_SESSION['user_email']) ? $_SESSION['user_email'] : ''; ?>"> 
+        <input type="email" placeholder="имя" value="<?php echo isset($_SESSION['user_email']) ? $_SESSION['user_email'] : ''; ?>"> <!-- Изменено на вывод пароля -->
+        <input type="password" name="user_email" placeholder="email" value="<?php echo isset($_SESSION['user_password']) ? $_SESSION['user_password'] : ''; ?>"> 
         <p>Бонусы:0<value[]></p> 
         <button name="edit" class="edit">Изменить </button> 
     </form> 
 </div>
-
-
-
-
-
-                <div class="history-zacaz">
-                    <div class="order-history">
                         <h3 class="order">Мои заказы</h3>
+                        <table>
+                            <thead>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
     </main>
         <!-- подвал -->
 <footer id="footer">
@@ -61,10 +61,7 @@
 </footer>
 </body>
 </html>
-
 <!-- модальное окно для отзыва -->
-
-
 <div class="modal fade" id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

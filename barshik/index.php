@@ -7,13 +7,15 @@
     <title>Главная</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<!-- //*для слайдера*// -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </head>
 <body >
     <header  content="width=device-width, initial-scale=1">
@@ -80,82 +82,74 @@
     </div>
 </div>
 
-<div class="reviews">
+
+
     <h2 class="text-reviews">Отзывы</h2>
-    <div class="slider">
-    <div class="slide">
-        <div class="otzv">
-            <img class= "user-img" src="images\free-icon-boy-4537069.png" alt="">
-            <p>Отличный кофе! Очень ароматный и насыщенный вкус. Упаковка красивая и удобная. Я очень доволен покупкой и 
-            с удовольствием буду заказывать этот кофе снова. Рекомендую всем любителям кофе!</p>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-fluid rounded" src="images/faceless-man.jpg" alt="...">
         </div>
-        <div class="otzv">
-            <img class= "user-img" src="images\free-icon-boy-4537069.png" alt="">
-            <p>Заказываю через это приложение не первый раз. 
-                Товарами доволен и доставка быстрая.Рекомендую!</p>
+        <div class="col-md-6">
+          <div class="review-text">
+            <h4>Имя пользователя 1</h4>
+            <p>Время отзыва 1</p>
+            <p>Сам отзыв 1</p>
+          </div>
         </div>
-        <div class="otzv">
-            <img class= "user-img" src="images\free-icon-boy-4537069.png" alt="">
-            <p>Отличный кофе! Очень ароматный и насыщенный вкус. Упаковка красивая и удобная. Я очень доволен покупкой и 
-            с удовольствием буду заказывать этот кофе снова. Рекомендую всем любителям кофе!</p>
-        </div>
+      </div>
     </div>
-    <div class="slide">
-    <div class="otzv">
-            <img class= "user-img" src="images\free-icon-boy-4537069.png" alt="">
-            <p>Очень ароматный и насыщенный вкус. Упаковка красивая и удобная. Я очень доволен покупкой и 
-            с удовольствием буду заказывать этот кофе снова. Рекомендую всем любителям кофе!</p>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-fluid rounded" src="images/faceless-man.jpg" alt="...">
         </div>
-        <div class="otzv">
-            <img class= "user-img" src="images\free-icon-boy-4537069.png" alt="">
-            <p>Заказываю через это приложение не первый раз. 
-                Товарами доволен и доставка быстрая.Рекомендую!</p>
+        <div class="col-md-6">
+          <div class="review-text">
+            <h4>Имя пользователя 2</h4>
+            <p>Время отзыва 2</p>
+            <p>Сам отзыв 2</p>
+          </div>
         </div>
-        <div class="otzv">
-            <img class= "user-img" src="images\free-icon-boy-4537069.png" alt="">
-            <p>Отличный кофе! Очень ароматный и насыщенный вкус. Упаковка красивая и удобная. Я очень доволен покупкой и 
-            с удовольствием буду заказывать этот кофе снова. Рекомендую всем любителям кофе!</p>
-        </div>
+      </div>
     </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img-fluid rounded" src="images/faceless-man.jpg" alt="...">
+        </div>
+        <div class="col-md-6">
+          <div class="review-text">
+            <h4>Имя пользователя 3</h4>
+            <p>Время отзыва 3</p>
+            <p>Сам отзыв 3</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 
 </div>
 
 </main>
     <!-- подвал -->
-<footer id="footer">
-    <div class="container">
-        <div class="connection">
-            <div class="connect">
-            <p>Связь с нами</p> 
-            <div class="images-connection">
-                <img src="images/instagram.png" alt=""class="icon-whatsapp">
-                <img src="images\icons8-vk-com-48.png" alt="" srcset="">
-                <img src="images\iconfinder-social-media-applications-23whatsapp-4102606_113811.png" class="icon-whatsapp">
-            </div>
-            </div>
-            <div class="clock-work">
-                    <p>Часы  работы:</p>
-                    <p>10:00 - 23:00</p>
-                </div>
-            </div>
-        <hr> 
-        <p class="copirater">© 2023 Копирование запрещено. Все права защищены.</p> 
-    </div>
-</footer>
+    <?php
+    include "footer.php"
+    ?>
 </body>
 </html>
-
-<script>
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-
-    function nextSlide() {
-        slides[currentSlide].style.display = 'none';
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].style.display = 'flex';
-    }
-
-    setInterval(nextSlide, 9000);
-</script>

@@ -58,18 +58,18 @@ header{
 }
 .button-category{
     border-radius: 10px;
-    border: none;
+    border: black solid 2px;
     padding: 10px;
-    background-color:  #0DB295;
-    color: white;
+    background-color:  white;
+    color: black;
     transition: all 0.5s ease-out;
 }
 .button-category:hover{
     border-radius: 10px;
-    border: none;
+    border: #0DB295 solid 3px;
     padding: 10px;
-    background-color:   #B5B8B1;
-    color: white;
+    background-color:   #fff;
+    color: #0DB295;
 
 }
 .logo{
@@ -94,33 +94,34 @@ header{
 }
 .button-tovar{
     border-radius: 10px;
-    border: none;
+    border: black solid 2px;
     padding: 10px;
-    background-color:  #0DB295;
-    color: white;
+    background-color:  white;
+    color: black;
     transition: all 0.5s ease-out;
 }
 .button-tovar:hover{
     border-radius: 10px;
-    border: none;
+    border: #0DB295 solid 3px;
     padding: 10px;
-    background-color:   #B5B8B1;
-    color: white;
+    background-color:   #fff;
+    color: #0DB295;
 }
 .podrobnee{
     border-radius: 10px;
-    border: none;
+    border: black solid 2px;
     padding: 10px;
-    background-color:  #0DB295;
-    color: white;
+    background-color:  white;
+    color: black;
     transition: all 0.5s ease-out;
 
 }
 .podrobnee:hover{
     border-radius: 10px;
+    border: #0DB295 solid 3px;
     padding: 10px;
-    background-color:   #B5B8B1;
-    color: white;
+    background-color:   #fff;
+    color: #0DB295;
 }
 
 /* часть с текстом */
@@ -329,6 +330,33 @@ a:hover {
 }
 .text-reviews{
     font-size: 40px;
-    font-family: math;
-    font-weight: 5px;
+    text-align: center;
 }
+
+.review-text {
+    padding: 20px;
+  }
+  
+  .review-text h4 {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .review-text p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-item img {
+    max-height: 300px;
+  }
+  
+  .carousel-item.active {
+    display: flex;
+    justify-content: center;
+  }
+  .carousel{
+    width: 100%;
+    padding: 3%;
+  }
