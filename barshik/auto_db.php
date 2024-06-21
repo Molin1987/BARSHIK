@@ -1,28 +1,28 @@
-<?php 
-include "connect.php"; 
-session_start(); 
-$email = trim($_POST['email']); 
-$password = trim( $_POST['password']); 
-$result = "SELECT * FROM Users WHERE email = $email and password_hash = $password "; 
- 
- 
- 
-// $query = mysqli_query($con, $result ); 
-// $user = mysqli_fetch_assoc($query); 
-// if(is_null ($user) ){//is_null — Проверяет, равно ли значение переменной null 
-//  echo "Такой пользователь не найден."; 
-//  exit(); 
-// } 
-// else if(count($user) == 1){ 
-//  echo "Логин или пароль введены неверно"; 
-//  exit(); 
-// } 
- 
-// $_SESSION["user"]= $user['user_id'];//наименование, значение, срок действия, путь к дирректории 
- 
-header('Location: personal-cab.php'); 
- 
-// После успешной авторизации 
-$_SESSION['user_email'] = $_POST['email']; 
-$_SESSION['user_password'] = $_POST['password']; 
+<?php
+session_start();
+include "connect.php";
+$email = trim($_POST['email']);
+$password = trim( $_POST['password']);
+$result = mysqli_query($con, "SELECT * FROM Users WHERE `Email` = '$email' and `Password_hash` = '$password'");
+$user = mysqli_fetch_array($result);
+
+$user_id = $user["User_id"];
+if (isset($user_id)) {
+    if ($user['role'] == 'user') {
+    $_SESSION["User_id"] = $user["User_id"];
+    $_SESSION["role"] = $user["role"];
+    $_SESSION["email"] = $user["email"];
+    $_SESSION["message"] = "Вы успешно авторизировались как пользователь";
+        // setcookie('User_id', $user_id, time() + 3600, "/");
+        header('Location: personal-cab.php');
+    } else {
+        $_SESSION["message"] = "Вы успешно авторизировались как администратор";
+        header('Location:admin\newTovar.php');
+    }
+}
+else {
+    echo "<script>alert(\"Данный пользователь не найден!\");
+    location.href = 'auto.php';
+    </script>";
+}
 ?>

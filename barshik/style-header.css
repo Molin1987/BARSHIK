@@ -1,27 +1,110 @@
 /* шапка */
-header{
+header {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, rgb(0, 0, 0), #0DB295);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.nav-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-height: 150px;
+    max-width: 150px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    max-height: 150px;
+    max-width: 150px;
+    transform: scale(1.1);
+}
+
+.nav-header h1 {
+    color: aliceblue;
+    font-size: 2rem;
+    margin: 0 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #0DB295;
+    transform: scale(1.1);
+}
+
+/* Добавим плавный переход */
+* {
+    transition: all 0.3s ease;
+}
+
+/* footer */
+footer{
+    align-items: center;
     width: 100%;
     height: 200px;
     display: flex;
-    justify-content: baseline;
     background: linear-gradient(rgb(0, 0, 0), #0DB295);
 }
-.naw-header{
+.connection{
+    color: aliceblue;
+    /* width: 40%; */
     display: flex;
-    width: 80%;
-    align-items: center;
+    /* flex-direction: column; */
     justify-content: space-around;
 }
-.naw-header h1{
-   color: aliceblue;
+.images-connection{
+    display: flex;
+    align-items: center;
+}
+
+.icon-whatsapp{
+    width: 35px;
+    height: 35px;
+}
+.icon-rutube{
+    width: 35px;
+    height: 35px;
     
 }
-.naw-header a{
-    color: aliceblue;
-     text-decoration: none;
- }
-.naw-menu{
+.copirater{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.clock-work{
     display: flex;
-    width: 50%;
-    justify-content: space-between;
+    flex-direction: column;
+}
+.connect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

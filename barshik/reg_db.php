@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 include "connect.php";
 
 $email = htmlspecialchars(trim($_POST['email']),ENT_QUOTES); // Удаляет все лишнее и записываем значение в переменную //$login
@@ -19,6 +21,6 @@ if(!empty($user2)){//empty — Проверяет, пуста ли переме�
 	echo "Данный  уже используется!";
 	exit();
 }
-$insert = mysqli_query($con,"INSERT INTO `users` (  `email`,`password_hash`, `Bonus_points`)VALUES( '$email','$password', '1' )");
+$insert = mysqli_query($con,"INSERT INTO `users` (  `email`,`password_hash`, `Bonus_points`, `role`)VALUES( '$email','$password', '1','user' )");
 // $_SESSION["user_id"] = mysqli_insert_id($con);
-header('Location: personal-cab.php');
+header('Location: auto.php');
